@@ -1,8 +1,6 @@
-using KindergartenCRUD.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using KindergartenCRUD.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace KindergartenCRUD.Pages.Kindergartens
 {

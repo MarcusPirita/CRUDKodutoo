@@ -1,4 +1,32 @@
-﻿@page
-@model KindergartenCRUD.Kindergartens.EditModel
-@{
-}
+﻿@model KindergartenCRUD.Pages.Kindergartens.EditModel
+
+<h2>Edit Kindergarten</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Kindergarten.GroupName"></label>
+        <input asp-for="Kindergarten.GroupName" class="form-control" />
+        <span asp-validation-for="Kindergarten.GroupName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Kindergarten.ChildrenCount"></label>
+        <input asp-for="Kindergarten.ChildrenCount" class="form-control" />
+        <span asp-validation-for="Kindergarten.ChildrenCount" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Kindergarten.KindergartenName"></label>
+        <input asp-for="Kindergarten.KindergartenName" class="form-control" />
+        <span asp-validation-for="Kindergarten.KindergartenName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Kindergarten.Teacher"></label>
+        <input asp-for="Kindergarten.Teacher" class="form-control" />
+        <span asp-validation-for="Kindergarten.Teacher" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-page="./Index" class="btn btn-secondary">Cancel</a>
+</form>
