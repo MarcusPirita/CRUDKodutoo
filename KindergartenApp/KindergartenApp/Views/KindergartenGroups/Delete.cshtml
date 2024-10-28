@@ -1,0 +1,33 @@
+﻿@model KindergartenApp.Models.KindergartenGroup
+
+<h1>Delete Kindergarten Group</h1>
+
+<h3>Are you sure you want to delete this group?</h3>
+<div>
+    <h4>Kindergarten Group</h4>
+    <hr />
+    <dl>
+        <dt>Group Name</dt>
+        <dd>@Model.GroupName</dd>
+
+        <dt>Children Count</dt>
+        <dd>@Model.ChildrenCount</dd>
+
+        <dt>Kindergarten Name</dt>
+        <dd>@Model.KindergartenName</dd>
+
+        <dt>Teacher</dt>
+        <dd>@Model.Teacher</dd>
+
+        <dt>Picture</dt>
+        <dd>
+            <img src="@Model.PicturePath" alt="Group Image" style="width:100px;height:auto;" />
+        </dd>
+    </dl>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit">Delete</button> |
+        <a asp-action="Index">Cancel</a>
+    </form>
+</div>

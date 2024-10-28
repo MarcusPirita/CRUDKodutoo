@@ -1,0 +1,37 @@
+﻿@model KindergartenApp.Models.KindergartenGroup
+
+<h1>Group Details</h1>
+
+<div>
+    <h4>Kindergarten Group</h4>
+    <hr />
+    <dl>
+        <dt>Group Name</dt>
+        <dd>@Model.GroupName</dd>
+
+        <dt>Children Count</dt>
+        <dd>@Model.ChildrenCount</dd>
+
+        <dt>Kindergarten Name</dt>
+        <dd>@Model.KindergartenName</dd>
+
+        <dt>Teacher</dt>
+        <dd>@Model.Teacher</dd>
+
+        <dt>Created At</dt>
+        <dd>@Model.CreatedAt.ToString("dd/MM/yyyy")</dd>
+
+        <dt>Updated At</dt>
+        <dd>@Model.UpdatedAt?.ToString("dd/MM/yyyy")</dd>
+
+        <dt>Picture</dt>
+        <dd>
+            <img src="@Model.PicturePath" alt="Group Image" style="width:200px;height:auto;" />
+        </dd>
+    </dl>
+    <p>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Delete" asp-route-id="@Model.Id">Delete</a> |
+        <a asp-action="Index">Back to List</a>
+    </p>
+</div>
